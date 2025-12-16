@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Navin Pali — Personal Portfolio</title>
+  <meta name="description" content="Portfolio website of Navin Pali - Developer, Designer, and Creative Technologist." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #071028;
+      --bg2: #0b1120;
+      --card: rgba(255,255,255,0.04);
+      --muted: #a9b3c7;
+      --accent: #ff7b00;
+      --accent-2: #ffb300;
+      --glass-border: rgba(255,255,255,0.06);
+      --radius: 16px;
+      --maxw: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,123,0,0.06), transparent 8%),
+                  radial-gradient(900px 500px at 90% 90%, rgba(255,179,0,0.03), transparent 6%),
+                  linear-gradient(180deg,var(--bg1), var(--bg2));
+      color:#eaf0ff;
+      padding:40px 20px;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;display:grid;gap:24px;}
+    .hero{display:flex;gap:20px;align-items:center;padding:20px;border-radius:20px;
+      background: linear-gradient(90deg, rgba(255,123,0,0.12), rgba(255,179,0,0.06));
+      box-shadow: 0 10px 30px rgba(2,6,23,0.5);}
+    .avatar{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;
+      font-weight:800;font-size:42px;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      animation: float 6s ease-in-out infinite;}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+    h1{margin:0;font-size:30px;}
+    .tag{margin-top:6px;color:#fffde7;font-weight:600;}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#071028;font-weight:700;
+      padding:10px 16px;border-radius:12px;text-decoration:none;display:inline-block;margin-top:12px;}
+    .btn:hover{opacity:0.9;}
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:24px;margin-top:16px;}
+    .card{background:rgba(255,255,255,0.02);border-radius:var(--radius);padding:18px;
+      border:1px solid var(--glass-border);box-shadow:0 10px 30px rgba(2,6,23,0.45);}
+    .section-title{color:var(--accent);font-weight:700;font-size:14px;margin-bottom:10px;}
+    .about{color:#cfd8e9;line-height:1.7;font-size:15px;}
+    .achievements{display:flex;flex-direction:column;gap:12px;}
+    .ach{background:rgba(255,255,255,0.03);padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+    .skill{padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px;color:var(--muted);
+      background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04);}
+    footer{text-align:center;color:var(--muted);margin-top:32px;font-size:13px;}
+    @media(max-width:880px){.grid{grid-template-columns:1fr}.hero{flex-direction:column;text-align:center}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="avatar" id="avatar">NP</div>
+      <div>
+        <h1 id="name">Navin Pali</h1>
+        <div class="tag" id="tagline">Creative Web Developer & Digital Designer</div>
+        <a class="btn" href="#" onclick="downloadResume(); return false;">Download Resume</a>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section>
+        <div class="card">
+          <div class="section-title">About Me</div>
+          <div class="about">Hi! I'm <strong>Navin Pali</strong> — a passionate web developer and digital designer who loves blending creativity with clean, modern code. I specialize in crafting responsive, elegant, and user-friendly websites using HTML, CSS, and JavaScript.<br><br>My goal is to create online experiences that not only look stunning but also perform flawlessly across all devices.</div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="section-title">Achievements</div>
+          <div class="achievements">
+            <div class="ach">🏆 Completed 50+ professional web design and development projects.</div>
+            <div class="ach">🚀 Developed and launched multiple responsive business websites.</div>
+            <div class="ach">🎨 Recognized for creating visually clean and modern UI/UX designs.</div>
+            <div class="ach">💼 Collaborated with leading brands to improve online user experience.</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="section-title">Skills</div>
+          <div class="skills">
+            <span class="skill">HTML5</span>
+            <span class="skill">CSS3</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Bootstrap</span>
+            <span class="skill">Responsive Design</span>
+            <span class="skill">UI/UX</span>
+            <span class="skill">Graphic Design</span>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <div class="section-title">Get In Touch</div>
+          <p>Email: <a href="mailto:navinpali08@gmail.com" style="color:var(--accent)">navinpali08@gmail.com</a></p>
+          <p>Phone: <a href="tel:+919321561015" style="color:var(--accent)">+91 93215 61015</a></p>
+          <p>WhatsApp: <a href="https://wa.me/919321561015" target="_blank" style="color:var(--accent)">Chat on WhatsApp</a></p>
+          <a class="btn" href="#contact">Message Me</a>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="section-title">Social Links</div>
+          <p><a href="#" style="color:var(--accent)">LinkedIn</a></p>
+          <p><a href="#" style="color:var(--accent)">GitHub</a></p>
+          <p><a href="#" style="color:var(--accent)">Instagram</a></p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>© 2025 Navin Pali — Designed & Coded with ❤️ by me.</footer>
+  </div>
+
+  <script>
+    function downloadResume(){
+      alert('Link your actual resume PDF here.');
+    }
+  </script>
+</body>
+</html>
